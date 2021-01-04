@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./Js/jquery-3.5.1.js"></script>
+    <script src="./Js/script.js"></script>
+    <link rel="icon" href="./img/play.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngoma App</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <span>
+            <H1>Get Your Favorite Tune ASAP</H1>
+        </span>
+        <div class="nav">
+            <ul>
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contacts</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Gallery</a></li>
+            </ul>
+        </div>
+        <div >
+            <div class="row">
+                <div class="col-md-6">
+                    <H1>MUSIC <br> MEDICINE <br> FOR THE SUOL</H1>
+                </div>
+                <div class="col-md-6">
+                    <h2>Intentional Travees Green <img src="./img/play.png" id="icon"></h2>
+                    <h2>Amani Reggae <img src="./img/play.png" id="icon2"></h2>
+                    <h2><a href="https://www.y2mate.com/en65">Download more Songs <img src="./img/download.png"></a></h2>
+                </div>
+            </div>
+        </div>
+
+        <audio id="mySong">
+
+            <source src="./songs/Travis Greene - Intentional (Official Music Video).mp3" type="audio/mp3">
+        </audio>
+        <audio id="song1">
+            <source src="./songs/y2mate.com - Amenifanyia Amani [REGGAE COVER] - TuneDem Band_360p.mp3" type="audio/mp3">
+        </audio>
+         <script>
+             var mySong = document.getElementById("mySong");
+             var icon = document.getElementById("icon");
+
+             icon.onclick = function() {
+                 if(mySong.paused){
+                     mySong.play();
+                     icon.src = "./img/pause2.png"
+                 }
+                 else{
+                     mySong.pause();
+                     icon.src = "./img/play.png";
+                 }
+             }
+
+
+             var song1 = document.getElementById("song1");
+             var icon2 = document.getElementById("icon2");
+
+             icon2.onclick = function(){
+                if(song1.paused){
+                     song1.play();
+                     icon2.src = "./img/pause2.png"
+                 }
+                 else{
+                     song1.pause();
+                     icon2.src = "./img/play.png";
+                 }
+             }
+         </script>
+
+         <footer>
+             <div class="row">
+                 <div class="col-md-4">
+                     <h1>Thank you</h1>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, excepturi?</p>
+                 </div>
+                 <div class="col-md-4">
+                     <h1>Reach</h1>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                 </div>
+                 <div class="col-md-4">
+                     <h1>Social</h1>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi.</p>
+                 </div>
+             </div>
+             <h3 >Copyright @ Brayoh 2021</h3>
+         </footer>
+        
+    </div>
+    
+</body>
+</html>
